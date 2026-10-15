@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
-    {
+    public function index(){
+        $title = 'Dashboard';
+        $content = 'Welcome to the dashboard!';
         return view('admin.dashboard', [
-            'title' => 'Dashboard',
-            'content' => 'Welcome to the admin dashboard.',
+            'title' => $title,
+            'content' => $content
         ]);
     }
 }

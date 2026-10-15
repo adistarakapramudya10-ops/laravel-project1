@@ -22,7 +22,7 @@
                             <th scope="col" class="px-6 py-3">NIS</th>
                             <th scope="col" class="px-6 py-3">Name</th>
                             <th scope="col" class="px-6 py-3">Classroom</th>
-                            <th scope="col" class="px-6 py-3">Status</th>
+                            <th scope="col" class="px-6 py-3">Address</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,17 +32,7 @@
                                 <td class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white">{{ $student['nis'] }}</td>
                                 <td class="px-6 py-4">{{ $student['name'] }}</td>
                                 <td class="px-6 py-4">{{ $student['classroom'] }}</td>
-                                <td class="px-6 py-4">
-                                    @if ($student['status'] === 'Active')
-                                        <span class="inline-flex items-center rounded-full bg-green-900 px-3 py-1 text-sm font-medium text-green-300">
-                                            Active
-                                        </span>
-                                    @else
-                                        <span class="inline-flex items-center rounded-full bg-red-900 px-3 py-1 text-sm font-medium text-red-300">
-                                            Inactive
-                                        </span>
-                                    @endif
-                                </td>
+                                <td class="px-6 py-4">{{ $student['address'] }}</td>
                             </tr>
                         @endforeach
                     </tbody>
